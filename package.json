@@ -1,0 +1,41 @@
+{
+  "name": "mobile-bio-lab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^4.5.0",
+    "cookie": "^0.5.0",
+    "date-fns": "^2.16.1",
+    "dotenv": "^17.2.1",
+    "formidable": "^3.5.4",
+    "framer-motion": "^6.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "jspdf": "^3.0.2",
+    "mysql2": "^2.3.3",
+    "next": "^15.4.5",
+    "next-auth": "^4.24.11",
+    "nodemailer": "^6.10.1",
+    "pdfkit": "^0.17.2",
+    "react": "^19.1.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-date-range": "^1.4.0",
+    "react-dom": "^19.1.1",
+    "react-icons": "^4.12.0",
+    "uuid": "^12.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.18"
+  }
+}
