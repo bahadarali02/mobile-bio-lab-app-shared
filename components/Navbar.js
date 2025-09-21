@@ -20,7 +20,7 @@ export default function Navbar() {
       { name: 'Protocols', href: '/protocols', icon: <FaBook className="mr-1" /> }
     ],
     technician: [
-      { name: 'Devices', href: '/devices', icon: <FaMicroscope className="mr-1" /> },
+      { name: 'Devices', href: '/technician/dashboard', icon: <FaMicroscope className="mr-1" /> },
       { name: 'Protocols', href: '/protocols', icon: <FaBook className="mr-1" /> }
     ],
     admin: [

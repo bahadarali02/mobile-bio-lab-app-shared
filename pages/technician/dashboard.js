@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { FiRefreshCw } from 'react-icons/fi';
 import Layout from '../../components/Layout';
 import { api } from '../../lib/api'; // Changed to named import
 import { useBLEDevice } from '../../hooks/useBLEDevice';
@@ -7,6 +9,8 @@ export default function TechnicianDashboard() {
   const [devices, setDevices] = useState([]);
   const [protocolUpdates, setProtocolUpdates] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);        // <-- add this line
+  const [activeTab, setActiveTab] = useState('devices'); // also missing earlier
   const { bleStatus, refreshStatus } = useBLEDevice();
 
   useEffect(() => {
@@ -14,8 +18,8 @@ export default function TechnicianDashboard() {
       try {
         setLoading(true);
         const [resDevices, resProtocols] = await Promise.all([
-          api.get('devices'), // Removed /api prefix
-          api.get('protocols') // Removed /api prefix
+          api.get('/api/devices'),
+          api.get('/api/protocols')
         ]);
         setDevices(resDevices.data || []);
         setProtocolUpdates(resProtocols.data || []);
@@ -30,9 +34,8 @@ export default function TechnicianDashboard() {
 
   const handleDeviceAction = async (deviceId, action) => {
     try {
-      await api.post(`devices/${deviceId}/${action}`); // Removed /api prefix
-      // Refresh device status
-      const res = await api.get('devices'); // Removed /api prefix
+      await api.post('/api/devices', { deviceId, action });
+      const res = await api.get('/api/devices');
       setDevices(res.data || []);
     } catch (error) {
       console.error(`Error ${action} device:`, error);

@@ -56,7 +56,7 @@ export default function DashboardLayout({ children, allowedRoles }) {
                 <NavLink href="/technician/dashboard">Dashboard</NavLink>
                 <NavLink href="/samples">Sample Verification</NavLink>
                 <NavLink href="/report/generate">Generate Reports</NavLink>
-                <NavLink href="/devices">Device Management</NavLink>
+                <NavLink href="/technician/dashboard">Device Management</NavLink>
               </>
             )}
             {user.role === 'admin' && (

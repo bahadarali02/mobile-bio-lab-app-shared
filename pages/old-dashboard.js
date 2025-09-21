@@ -205,7 +205,7 @@ export default function Dashboard() {
                     </div>
                   </div>
                   <div className="mt-4">
-                    <Link href="/devices" legacyBehavior>
+                    <Link href="/technician/dashboard" legacyBehavior>
                       <a className="text-sm font-medium text-indigo-600 hover:text-indigo-500 flex items-center">
                         Manage devices <FaChevronRight className="ml-1 h-3 w-3" />
                       </a>

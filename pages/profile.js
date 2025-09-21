@@ -105,7 +105,7 @@ const handleExport = async () => {
     // const response = await fetch('/api/export/test-jspdf', {
     
     // Then test with profile endpoint
-    const response = await fetch('/api/export/profile-jspdf', {
+    const response = await fetch('/api/export/profile', {
       credentials: 'include'
     });
     
